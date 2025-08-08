@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cryptocurrency Quote</title>
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/skeleton.css" />
+        <link rel="stylesheet" href="css/app.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="one-half column">
+                    <img
+                        src="img/cryptomonedas.png"
+                        alt="Cryptocurrency Image"
+                    />
+                </div>
+                <div class="one-half column">
+                    <form id="form">
+                        <div class="row">
+                            <label for="currency">Choose Your Currency</label>
+                            <select
+                                class="u-full-width"
+                                id="currency"
+                                name="currency"
+                            >
+                                <option value="">Choose your currency</option>
+                                <option value="USD">US Dollar</option>
+                                <option value="MXN">Mexican Peso</option>
+                                <option value="GBP">British Pound</option>
+                                <option value="EUR">Euro</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <div>
+                                <label for="cryptocurrency"
+                                    >Choose Your Cryptocurrency</label
+                                >
+                                <select
+                                    class="u-full-width"
+                                    id="cryptocurrency"
+                                    name="cryptocurrency"
+                                >
+                                    <option value="" selected disabled>
+                                        Choose your cryptocurrency
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <input
+                            class="button-primary u-full-width"
+                            type="submit"
+                            value="Quote"
+                        />
+
+                        <div id="result" class="result"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
