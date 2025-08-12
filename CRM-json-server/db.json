@@ -1,0 +1,32 @@
+{
+  "clients": [
+    {
+      "id": "rv0ej50s9f",
+      "name": "Santino Maturo",
+      "email": "correo2@correo.com",
+      "phone": "2346509733",
+      "company": "papersPro"
+    },
+    {
+      "id": "i7yyohr8ss9",
+      "name": "Juli alonso",
+      "email": "correo2@correo.com",
+      "phone": "2346509733",
+      "company": "aoba"
+    },
+    {
+      "name": "Luchi Fernández",
+      "email": "lucia.fernandez@email.com",
+      "phone": "5551234567",
+      "company": "TechNova",
+      "id": "k2l9x8v7wq"
+    },
+    {
+      "id": "z8m3n5b1c4",
+      "name": "Carlos Ramírez",
+      "email": "carlos.ramirez@email.com",
+      "phone": "5559876543",
+      "company": "InnovaSoft"
+    }
+  ]
+}
