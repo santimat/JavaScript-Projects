@@ -1,0 +1,25 @@
+extends ./layout/index
+
+block content
+    main.container.mt-5
+        h1.text-center.mt-5= page
+        .row
+            .col-md-12
+                h2.d-block.w-100.text-center Add a testimonial
+                if (errors)
+                        each error in errors
+                            .alert.col.alert-danger.text-center= "The " + error + " must be filled"  
+                
+            .row.justify-content-center.col
+                .col-md-8 
+                    form(method="POST")
+                        .form-group 
+                            label(for="name") Name
+                            input#name.form-control(type="text", placeholder="Your name", name="name", value= name )
+                        .form-group 
+                            label(for="email") Email
+                            input#email.form-control(type="email", placeholder="Your email", name="email", value= email )
+                        .form-group 
+                            label(for="message") Message
+                            textarea#message.form-control(name="message", placeholder="your message", rows=3 )= message
+                        input.btn.btn-success.btn-block(type="submit")

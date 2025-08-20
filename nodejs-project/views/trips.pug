@@ -1,0 +1,32 @@
+extends ./layout/index
+
+block content
+    h1.mt-5.text-center= page
+    main.container.mt-5
+        .row.upcoming-trips 
+            //- Method to iterate an array
+            each trip in trips
+                .col-md-6.col-lg-4.mb-4 
+                    .card
+                        img.card-img-top(src=`img/destinos_${trip.image}.jpg`)
+                        .card-body
+                            h2= trip.title
+                            p
+                                svg.icon.icon-tabler.icons-tabler-outline.icon-tabler-calendar(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none' stroke='#dc135f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
+                                    path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                                    path(d='M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z')
+                                    path(d='M16 3v4')
+                                    path(d='M8 3v4')
+                                    path(d='M4 11h16')
+                                    path(d='M11 15h1')
+                                    path(d='M12 15v3')
+                                | #{trip.departure_date} / #{trip.return_date}
+                            p
+                                svg.icon.icon-tabler.icons-tabler-filled.icon-tabler-user(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='#dc135f')
+                                    path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                                    path(d='M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z')
+                                    path(d='M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z')
+                                | #{trip.availables} Availables
+                            p= trip.description.substr(0,100) + "..."
+                            a.btn.btn-success.btn-block(href=`trips/${trip.slug}`) More information 
+
